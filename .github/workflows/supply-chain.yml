@@ -1,0 +1,53 @@
+name: supply-chain
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version: stable
+          cache: false
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Verify npm registry signatures and attestations
+        run: npm audit signatures
+
+      - name: Install osv-scanner (checksums verified by sum.golang.org)
+        run: go install github.com/google/osv-scanner/v2/cmd/osv-scanner@v2.7.1
+
+      - name: Scan for known vulnerabilities
+        run: "$(go env GOPATH)/bin/osv-scanner scan source --recursive ."
+
+      - name: Validate pack manifests, locks, and profiles
+        run: npm run validate
+
+      - name: Run management script tests
+        run: npm test
