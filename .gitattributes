@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Preserve the rendered vendor exception's original bytes.
+skills/vendor/** -text

@@ -1,0 +1,8 @@
+{
+  "name": "home-skills-sandbox-migrate-to-next",
+  "private": true,
+  "description": "Explicit stable-to-preview Sandbox migration tasks.",
+  "skills": [
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/sandbox-migrate-to-next"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "personal-agent-home",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "description": "Pinned tooling and reproducible external skill packs for a personal agent environment.",
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "skills:restore": "node scripts/skills.mjs restore",
+    "skills:plan": "node scripts/skills.mjs plan",
+    "skills:sync": "node scripts/skills.mjs sync"
+  },
+  "devDependencies": {
+    "skills": "1.9.0"
+  }
+}

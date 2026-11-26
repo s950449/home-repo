@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "sandbox-next": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/sandbox-next/SKILL.md",
+      "computedHash": "884486d1233c33c08a4fe6dd68675f25d69b95561e114c9fdb3d1a118446855c",
+      "via": "."
+    }
+  }
+}

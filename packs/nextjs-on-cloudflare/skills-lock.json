@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "nextjs-on-cloudflare": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/nextjs-on-cloudflare/SKILL.md",
+      "computedHash": "98fc76c65349799a454bcd6ab922ea6217aa6ddffe866cd6ccfc0c494b8fc9be",
+      "via": "."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "cloudflare-worker",
+  "pack": "cloudflare-worker",
+  "description": "Workers development and Wrangler operations; no deployment authorization is implied.",
+  "skills": [
+    "workers-best-practices",
+    "wrangler"
+  ]
+}

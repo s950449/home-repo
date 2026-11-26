@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "skill": "reverse-engineer-anything",
+  "kind": "rendered-vendor-exception",
+  "upstream_url": "https://github.com/morluto/rea",
+  "upstream_commit": "160d821ac9a0310afcb8d1fc427862dd6508add5",
+  "upstream_tag": "rea-agents-6.8.0",
+  "upstream_path": ".agents/skills/reverse-engineer-anything",
+  "license": "MIT",
+  "verified_on": "2026-11-26",
+  "transformations": [
+    "Replace rea-agents@latest with rea-agents@6.8.0 in SKILL.md.",
+    "Add metadata.tool_count: 229 after metadata.version: \"49\"."
+  ],
+  "verification": "All eight local files match the pinned upstream bundle after the two documented transformations. The original installation mechanism is not established.",
+  "original_snapshot_tree_sha256": "e9275b6d7beb65caa76663f106338474fd142fe904261f4c1c9df74329e997cc",
+  "original_snapshot_hash_algorithm": "sha256-tree-v1"
+}

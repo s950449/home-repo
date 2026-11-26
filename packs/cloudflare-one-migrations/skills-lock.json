@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "cloudflare-one-migrations": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/cloudflare-one-migrations/SKILL.md",
+      "computedHash": "ee17486c9c90527324400a7434097b2741abe48b68b27226d550347a9a5cd9bf",
+      "via": "."
+    }
+  }
+}

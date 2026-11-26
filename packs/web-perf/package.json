@@ -1,0 +1,8 @@
+{
+  "name": "home-skills-web-perf",
+  "private": true,
+  "description": "Task-specific web performance analysis.",
+  "skills": [
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/web-perf"
+  ]
+}

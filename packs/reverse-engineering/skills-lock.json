@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "skills": {
+    "reverse-engineer-anything": {
+      "source": "../../skills/vendor/rea/reverse-engineer-anything",
+      "sourceType": "local",
+      "computedHash": "d1311065cf6dbb171ece12de27261f67ea43d32bb1a94680f8eb9b70ef4e75e3",
+      "installMode": "copy"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Machine-local paths, installation state, and generated data
+machine.local.json
+.local/
+.cache/
+__pycache__/
+*.py[cod]
+node_modules/
+npm-debug.log*
+
+# Skills CLI installations are rebuildable, pack-local artifacts.
+/packs/*/.agents/
+/packs/*/.claude/
+
+# Local credentials and environment files (never copy harness auth directories)
+.env
+.env.*
+!.env.example
+
+# Editors and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

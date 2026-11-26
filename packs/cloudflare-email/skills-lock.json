@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "cloudflare-email-service": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/cloudflare-email-service/SKILL.md",
+      "computedHash": "97025c6184461a68f2d922aea31ddfe30b1e1d1dac0fabb98debac952032ffba",
+      "via": "."
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "home-skills-cloudflare-agent",
+  "private": true,
+  "description": "Stateful agent development on Cloudflare Workers.",
+  "skills": [
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/workers-best-practices",
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/wrangler",
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/durable-objects",
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/agents-sdk"
+  ]
+}

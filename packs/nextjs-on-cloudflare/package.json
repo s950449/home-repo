@@ -1,0 +1,8 @@
+{
+  "name": "home-skills-nextjs-on-cloudflare",
+  "private": true,
+  "description": "Next.js deployment guidance for Cloudflare Workers.",
+  "skills": [
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/nextjs-on-cloudflare"
+  ]
+}

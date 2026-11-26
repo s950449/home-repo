@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "turnstile-spin": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/turnstile-spin/SKILL.md",
+      "computedHash": "296adf8535186e32c6d1faf6480d294f259ef56a2f7a687bf9447924c8729423",
+      "via": "."
+    }
+  }
+}

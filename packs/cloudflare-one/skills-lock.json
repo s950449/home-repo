@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "cloudflare-one": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/cloudflare-one/SKILL.md",
+      "computedHash": "99bba09975c7f2c6971e500ef95bd3de7907831d39b130be047ea50205d022a8",
+      "via": "."
+    }
+  }
+}

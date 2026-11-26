@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256-tree-v1",
+  "import": {
+    "kind": "local-installed-snapshot",
+    "source": "~/.agents/skills",
+    "imported_on": "2026-11-26",
+    "upstream_provenance": "Unknown: local installed files preserved without upstream version claims."
+  },
+  "skills": [
+    {
+      "id": "agents-sdk",
+      "path": "skills/vendor/local-import/agents-sdk",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "ba65a4b63b603f633a8bb27adf8ed02ad456757c9e33cfdb9c254a4d10de60d3"
+    },
+    {
+      "id": "cloudflare",
+      "path": "skills/vendor/local-import/cloudflare",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "15cf65158e495bf36e838cd135a5140ea5ac8f8182b387bd57016c95ce40a7ea"
+    },
+    {
+      "id": "cloudflare-email-service",
+      "path": "skills/vendor/local-import/cloudflare-email-service",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "9d869860560612f2b0064436cd69e1bfee1a2307d20c72a28898dddfeea6a206"
+    },
+    {
+      "id": "cloudflare-one",
+      "path": "skills/vendor/local-import/cloudflare-one",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "06b3a518c0837c12b78b3855ce23d00b79e691fa8cf6d7b804e850684e18196e"
+    },
+    {
+      "id": "cloudflare-one-migrations",
+      "path": "skills/vendor/local-import/cloudflare-one-migrations",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "dbbae337f5106c5203385c17bb1c1d8181bdae9e5cef93b6e9bb802e0965b30f"
+    },
+    {
+      "id": "durable-objects",
+      "path": "skills/vendor/local-import/durable-objects",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "1950ed648cea150891a442189e23de8bfe612d42dfaa76170e4f67e475f35495"
+    },
+    {
+      "id": "nextjs-on-cloudflare",
+      "path": "skills/vendor/local-import/nextjs-on-cloudflare",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "b8551e65725fa21625df5e9be3a599f0c4e0c655e3ce807bb505a49361c1a0a9"
+    },
+    {
+      "id": "reverse-engineer-anything",
+      "path": "skills/vendor/local-import/reverse-engineer-anything",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "e9275b6d7beb65caa76663f106338474fd142fe904261f4c1c9df74329e997cc"
+    },
+    {
+      "id": "sandbox-migrate-to-next",
+      "path": "skills/vendor/local-import/sandbox-migrate-to-next",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "8785ac1a3717e6fb5da534077016a1d3ba5e98514cfaa4befb4ced46b9d3db06"
+    },
+    {
+      "id": "sandbox-next",
+      "path": "skills/vendor/local-import/sandbox-next",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "e03fc05b294216e7fb3a5c29bdb1721285a8c4520c68c5780dba15b0d1c129b3"
+    },
+    {
+      "id": "sandbox-stable",
+      "path": "skills/vendor/local-import/sandbox-stable",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "ba6d4c6008cedc2119eea17b013518c35ba52f07fea4847256dcf230b141bf74"
+    },
+    {
+      "id": "turnstile-spin",
+      "path": "skills/vendor/local-import/turnstile-spin",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "ecc0a9633ef50a569eeaaeb9f33dba55c27b0cf1e3a80d574d7ed753bf310bad"
+    },
+    {
+      "id": "web-perf",
+      "path": "skills/vendor/local-import/web-perf",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "2eb8f338be1814078bfea023fae2032a1c5a313e7dc84d114791a0c35b8f8ee0"
+    },
+    {
+      "id": "workers-best-practices",
+      "path": "skills/vendor/local-import/workers-best-practices",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "db7fb73645856496179b8eff0b2e9bd954510db8b0bb22726e2dbd94dee04209"
+    },
+    {
+      "id": "wrangler",
+      "path": "skills/vendor/local-import/wrangler",
+      "upstream_url": null,
+      "upstream_commit": null,
+      "license_status": "unverified-local-import",
+      "tree_sha256": "ed164e5d34c60710d234bd204fbcafbc6c79ce84c5ff44f602f77d5a94a79a0d"
+    }
+  ]
+}

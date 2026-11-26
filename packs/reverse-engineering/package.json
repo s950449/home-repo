@@ -1,0 +1,10 @@
+{
+  "name": "home-skills-reverse-engineering",
+  "private": true,
+  "description": "Preserved REA 6.8.0 rendered skill; no MCP server or engine is installed.",
+  "homeRepo": {
+    "localSkills": [
+      "../../skills/vendor/rea/reverse-engineer-anything"
+    ]
+  }
+}

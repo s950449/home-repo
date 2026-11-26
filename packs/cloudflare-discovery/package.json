@@ -1,0 +1,8 @@
+{
+  "name": "home-skills-cloudflare-discovery",
+  "private": true,
+  "description": "Cloudflare product discovery and architecture selection.",
+  "skills": [
+    "https://github.com/cloudflare/skills/tree/626547c06881a20b3322bdc2ed6e6451b33a4fb6/skills/cloudflare"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "skills": {
+    "agents-sdk": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/agents-sdk/SKILL.md",
+      "computedHash": "8d6021e4132396d6d1aecf3cf18677219eb070a01f35f0aca15e309fe91edb1a",
+      "via": "."
+    },
+    "durable-objects": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/durable-objects/SKILL.md",
+      "computedHash": "552bd9399b0865dbf2a540a266d4bf9bc3a051ec2bd659dc407ff1a67f36f543",
+      "via": "."
+    },
+    "workers-best-practices": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/workers-best-practices/SKILL.md",
+      "computedHash": "7dc9cf1a6080082f7baac587b6b9771a7fcd49e90ab9e8e4c8ebac0c043fadde",
+      "via": "."
+    },
+    "wrangler": {
+      "source": "cloudflare/skills",
+      "ref": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "commit": "626547c06881a20b3322bdc2ed6e6451b33a4fb6",
+      "sourceType": "github",
+      "skillPath": "skills/wrangler/SKILL.md",
+      "computedHash": "3dbd05c2ebac58a19bac22f7f72e4d19a5e4b7db21d7c84cf1bf3c6b4769906f",
+      "via": "."
+    }
+  }
+}
