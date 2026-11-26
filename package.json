@@ -12,7 +12,10 @@
     "test": "node --test tests/*.test.mjs",
     "skills:restore": "node scripts/skills.mjs restore",
     "skills:plan": "node scripts/skills.mjs plan",
-    "skills:sync": "node scripts/skills.mjs sync"
+    "skills:sync": "node scripts/skills.mjs sync",
+    "profiles:plan": "node scripts/profiles.mjs plan",
+    "profiles:apply": "node scripts/profiles.mjs apply",
+    "profiles:remove": "node scripts/profiles.mjs remove"
   },
   "devDependencies": {
     "skills": "1.9.0"

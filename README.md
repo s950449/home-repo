@@ -36,12 +36,12 @@ package-lock.json           npm dependency versions and integrity
 packs/<pack>/package.json   Selected sources pinned to full commits
 packs/<pack>/skills-lock.json
                             Native skill commits and SHA-256 content hashes
-profiles/                   Work contexts mapped to optional packs
+profiles/                   Work contexts composing packs and personal skills
 skills/personal/            Personal skills, when added
 skills/vendor/rea/          Documented rendered-skill exception and license
 projects/                   Independent repository registry
 adapters/                   Harness compatibility notes
-scripts/                    Thin CLI wrapper and offline integrity checks
+scripts/                    Pack management, profile deployment, integrity checks
 tests/                      Management-tool unit tests, not skill benchmarks
 docs/migrations/            Historical local-import evidence
 machine.local.json          Machine-local paths; excluded from Git
@@ -93,6 +93,28 @@ explicit decision.
 
 See [available packs and maintenance](packs/README.md).
 
+## Select personal and external skills per project
+
+Keep each personal skill in `skills/personal/<id>/SKILL.md`. A version 2
+profile can combine multiple external `packs` and individual `personal` skill
+IDs; a personal-only profile needs no pack or GitHub publication.
+
+After creating a profile and explicitly restoring any external packs it uses:
+
+```sh
+npm run profiles:plan -- my-backend --target /path/to/project --agent opencode
+# Read the target instructions, review its Git status, and ignore generated paths.
+npm run profiles:apply -- my-backend --target /path/to/project --agent opencode --write
+```
+
+Deployment copies an independent snapshot into the selected Git repository or
+worktree. It requires ignored generated paths and refuses tracked, unmanaged,
+modified, missing, or unsafe destinations. Switching profiles removes only
+unchanged files recorded as owned by this tool. Nothing is installed globally.
+Different concurrent profiles require separate worktrees.
+
+See [profile format, safeguards, refresh, and removal](profiles/README.md).
+
 ## Working modes
 
 - **Home mode:** Plan and navigate independent repositories from here. Specify
@@ -100,7 +122,8 @@ See [available packs and maintenance](packs/README.md).
 - **Pack mode:** Start a harness in a restored pack directory to discover that
   pack's skills. This does not make another repository's settings active.
 - **Project mode:** Implement and test in the target repository or worktree.
-  Project-specific skill deployment remains separate from pack restoration.
+  Explicit profile deployment selects that target's skills separately from pack
+  restoration; profile files alone never activate anything.
 
 Always read the target repository's instructions and confirm its working
 directory, Git status, and permissions before modifying it.
@@ -116,8 +139,8 @@ The 14 Cloudflare skills remain at their original matching commit
 REA retains its original rendered 6.8.0 skill with provenance and the MIT license.
 See [migration evidence](docs/migrations/local-import.md).
 
-No Git remote or initial commit has been created. No benchmark, automated skill
-improvement, MCP registration, or analysis-engine installation has been added.
+No benchmark, automated skill improvement, MCP registration, or analysis-engine
+installation has been added.
 Content reproducibility does not guarantee upstream availability, workflow
 correctness, or OS-specific tool compatibility. Only Linux has been tested.
 

@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const AGENTS = new Set(["codex", "opencode", "pi", "claude-code"]);
-const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const HASH = /^[a-f0-9]{64}$/;
 const GIT_SOURCE = /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/tree\/([a-f0-9]{40})\/(.+)$/;
 const OMIT_DIRS = new Set([".git", "__pycache__", "__pypackages__"]);

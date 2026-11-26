@@ -1,6 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "global",
   "description": "Minimal cross-project default; intentionally empty until real workflows justify additions.",
-  "skills": []
+  "packs": [],
+  "personal": []
 }

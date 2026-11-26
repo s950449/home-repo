@@ -45,17 +45,31 @@ uses frozen locks by default, requires explicit agents, and stops on modified or
 untracked destinations. Lock-writing sync requires `--write-lock`.
 
 It does not deploy to arbitrary projects, register MCP servers, install analysis
-engines, or alter global settings. If a project deployment layer is added, it
-must at least:
+engines, or alter global settings.
 
-1. Show the source, destination, selected profile, and version.
-2. Support previewing changes and handle existing files and local edits before
-   overwriting or deleting anything.
-3. Manage only items recorded as its own installations, never clear an entire
-   skill directory.
-4. Never copy entire `~/.codex`, `~/.claude`, OpenCode, or pi state directories.
-5. Never implicitly enable MCP servers, install software, or expand permissions.
-6. Keep activation sets independent for parallel sessions.
+## Explicit profile deployment
+
+`scripts/profiles.mjs` is a separate, offline deployment layer. Version 2 profiles
+compose restored external packs and selected local personal skills. An explicit
+target and agents are required; writes additionally require `--write`.
+
+Preview with `profiles:plan`, deploy with `profiles:apply`, and preview/remove only
+owned snapshots with `profiles:remove`. Shared-compatible agents use
+`.agents/skills`; Claude Code uses `.claude/skills`. Selecting both groups creates
+identical snapshots in both paths; existing global or explicitly configured
+sources are unchanged and can still affect discovery or precedence.
+
+Deployments require ignored generated paths and protect tracked files, existing
+unmanaged skills, locally modified copies, and unsafe paths. They use independent
+copies and a target-local ownership receipt instead of source symlinks. One
+activation set belongs to one Git root/worktree; parallel selections need
+different worktrees, not a shared profile switch.
+
+No entire harness state directories are copied. No MCP registrations, software
+installations, permission changes, or global settings are performed. The command
+does not launch sessions or guarantee that a harness sees only the selected
+skills. See [`profiles/README.md`](../profiles/README.md) for the full workflow,
+crash-recovery limits, and instruction-review requirements.
 
 ## Official documentation
 

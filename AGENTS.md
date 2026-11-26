@@ -25,7 +25,11 @@ It is not the operating system's home directory and not a product monorepo.
   It writes only inside that pack. Never install every pack or use global scope
   as a side effect of setup. Sync requires explicit `--write-lock`.
 - Profiles and machine mappings are custom data, not native harness config.
-  They do not install skills, register tools, or grant permissions.
+  Profile files alone do not activate anything. Explicit `profiles:apply`
+  deployment requires a target, agents, and `--write`; it does not grant
+  permissions or register tools. Preview and read the target instructions first.
+  Use separate worktrees for concurrent profiles. Never bypass ownership,
+  Git-ignore, or local-edit checks.
 - Do not deploy to global skill directories or edit harness settings unless
   the user explicitly requests that work.
 - Keep upstream snapshots intact. Review provenance, licenses, scripts, and

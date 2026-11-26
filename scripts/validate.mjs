@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import assert from "node:assert/strict";
-import { readFile, readdir } from "node:fs/promises";
+import { readdir } from "node:fs/promises";
 import path from "node:path";
+import { personalSkill, resolveProfile } from "./profile-state.mjs";
 import {
   ROOT, assertInstallationsSafe, assertLockMatchesManifest, exists,
   loadPack, readJson,
@@ -29,9 +30,7 @@ async function main() {
   if (await exists(personal)) {
     for (const entry of await readdir(personal, { withFileTypes: true })) {
       if (!entry.isDirectory()) continue;
-      const text = await readFile(path.join(personal, entry.name, "SKILL.md"), "utf8");
-      const name = /^name:\s*([a-z0-9]+(?:-[a-z0-9]+)*)\s*$/m.exec(text)?.[1];
-      assert.equal(name, entry.name, `Personal skill name differs: ${entry.name}`);
+      const { id: name } = await personalSkill(entry.name);
       assert(!known.has(name), `Personal skill conflicts with external skill: ${name}`);
       known.add(name);
     }
@@ -39,21 +38,7 @@ async function main() {
   let profiles = 0;
   for (const filename of await readdir(path.join(ROOT, "profiles"))) {
     if (!filename.endsWith(".json")) continue;
-    const profile = await readJson(path.join(ROOT, "profiles", filename));
-    assert.equal(profile.schema_version, 1, `Profile schema differs: ${filename}`);
-    assert.equal(profile.id, filename.slice(0, -5), `Profile ID differs: ${filename}`);
-    assert(Array.isArray(profile.skills), `Expected skill array: ${filename}`);
-    assert.equal(new Set(profile.skills).size, profile.skills.length, `Duplicate profile skill: ${filename}`);
-    for (const id of profile.skills) assert(known.has(id), `Unknown profile skill: ${id}`);
-    if (profile.pack) {
-      assert(packs.has(profile.pack), `Unknown profile pack: ${profile.pack}`);
-      assert.deepEqual(
-        [...profile.skills].sort(), [...packs.get(profile.pack).declarations.keys()].sort(),
-        `Profile/pack selection differs: ${filename}`,
-      );
-    } else {
-      assert.equal(profile.skills.length, 0, `Nonempty profile must select a pack: ${filename}`);
-    }
+    await resolveProfile(filename.slice(0, -5));
     profiles++;
   }
   console.log(`OK: ${packs.size} native skill packs, ${known.size} unique skills, ${profiles} profiles.`);

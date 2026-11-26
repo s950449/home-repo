@@ -94,6 +94,9 @@ Do not hand-refresh content hashes to conceal local changes. Preserve intentiona
 customizations as personal skills or documented forks before restoring. The
 wrapper does not offer a force-overwrite switch.
 
-Installed skills remain in the pack directory. A future project deployment or
-session-launch layer can consume them, but is not implemented here. Existing
-global skills are neither hidden nor removed by selecting a pack.
+Installed pack sources remain in the pack directory. Profiles can combine
+multiple restored packs with local personal skills, then explicitly deploy
+independent snapshots into a selected project/worktree. See
+[`profiles/README.md`](../profiles/README.md). Pack restore never deploys
+implicitly. Existing global skills are neither hidden nor removed by selecting
+a pack or profile.

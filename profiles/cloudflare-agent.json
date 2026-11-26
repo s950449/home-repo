@@ -1,12 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "cloudflare-agent",
-  "pack": "cloudflare-agent",
   "description": "Stateful agent development on Cloudflare Workers.",
-  "skills": [
-    "workers-best-practices",
-    "wrangler",
-    "durable-objects",
-    "agents-sdk"
-  ]
+  "packs": ["cloudflare-agent"],
+  "personal": []
 }
