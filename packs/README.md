@@ -26,6 +26,8 @@ Root npm dependencies pin the installer separately from skill content.
 | `agent-browser` | `agent-browser` |
 | `find-skills` | `find-skills` |
 | `remotion-best-practices` | `remotion-best-practices` |
+| `addyosmani-agent-skills` | `api-and-interface-design`, `browser-testing-with-devtools`, `ci-cd-and-automation`, `code-review-and-quality`, `code-simplification`, `context-engineering`, `debugging-and-error-recovery`, `deprecation-and-migration`, `documentation-and-adrs`, `doubt-driven-development`, `frontend-ui-engineering`, `git-workflow-and-versioning`, `idea-refine`, `incremental-implementation`, `performance-optimization`, `planning-and-task-breakdown`, `security-and-hardening`, `shipping-and-launch`, `source-driven-development`, `spec-driven-development`, `test-driven-development`, `using-agent-skills` |
+| `show-me` | `show-me` |
 
 Each pack is independently selectable. Related tools, such as the
 `agent-browser` CLI, have their own installation requirements.
@@ -40,9 +42,13 @@ Each pack is independently selectable. Related tools, such as the
 | Find Skills | [`v1.9.1`](https://github.com/vercel-labs/skills/releases/tag/v1.9.1) |
 | Remotion Skills | [`0fd8c6b`](https://github.com/remotion-dev/skills/commit/0fd8c6b1fadcd26718a2919bcac705809f8456a3) |
 | REA | [`rea-agents-6.10.1`](https://github.com/morluto/rea/releases/tag/rea-agents-6.10.1) |
+| Addy Osmani Agent Skills | [`97e12d0`](https://github.com/addyosmani/agent-skills/commit/97e12d03e787fb5e68d313c693f080173027ffe3) |
+| HumanLayer show-me (vendored fork) | [`6ab9013`](https://github.com/humanlayer/skills/commit/6ab9013a10c28f5046f7f999549cd5328a0b30d7) |
 
 Cloudflare Skills and Remotion Skills had no upstream releases or tags as of
-November 27, 2026. In Matt Pocock Skills v1.3.2, use `diagnosing-bugs` for
+November 27, 2026. Addy Osmani Agent Skills `97e12d0` is an untagged commit
+between releases `0.6.0` and `0.6.1`; it is the only commit matching the local
+installation. In Matt Pocock Skills v1.3.2, use `diagnosing-bugs` for
 `diagnose`, `to-spec` for `to-prd`, and `to-tickets` for `to-issues`.
 `zoom-out`, `caveman`, and `write-a-skill` were removed upstream and remain
 available at their existing `b8be62f` pin.
@@ -60,7 +66,7 @@ available at their existing `b8be62f` pin.
   ID when the names differ. For example, Remotion uses `skills/remotion` for
   `remotion-best-practices`.
 
-`reverse-engineering` is the sole vendored exception. `homeRepo.localSkills` is custom
+`reverse-engineering` and `show-me` are the vendored exceptions. `homeRepo.localSkills` is custom
 Home Repo metadata pointing to a relative, Git-tracked vendored bundle.
 The CLI's native `skills` field rejects local paths. The wrapper uses native
 `skills add` to create/update this local lock and native frozen restore afterward.

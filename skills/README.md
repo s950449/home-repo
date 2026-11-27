@@ -3,8 +3,11 @@
 This directory holds maintained source content, not automatic harness activation.
 
 - `personal/<id>/`: Personal skills, when added. Git versions their source.
-- `vendor/rea/`: The sole current vendoring exception: the release-pinned
-  REA skill, its provenance, and the upstream MIT license.
+- `vendor/<id>/`: Documented vendoring exceptions, each with provenance and
+  the upstream license:
+  - `vendor/rea/`: The release-pinned, rendered REA skill.
+  - `vendor/show-me/`: The `humanlayer/skills` show-me skill with a local
+    safety section.
 
 Unmodified external skills belong in `packs/` as pinned source declarations and
 native lockfiles. The 14 original Cloudflare snapshots have been removed only

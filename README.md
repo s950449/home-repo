@@ -39,6 +39,7 @@ packs/<pack>/skills-lock.json
 profiles/                   Work contexts composing packs and personal skills
 skills/personal/            Personal skills, when added
 skills/vendor/rea/          Documented rendered-skill exception and license
+skills/vendor/show-me/      Documented modified-skill exception and license
 projects/                   Independent repository registry
 adapters/                   Harness compatibility notes
 scripts/                    Pack management, profile deployment, integrity checks
@@ -137,6 +138,8 @@ or machine-local state.
 The 14 Cloudflare skills remain at their original matching commit
 `626547c06881a20b3322bdc2ed6e6451b33a4fb6`, not today's upstream version.
 The vendored REA skill tracks release 6.10.1 with provenance and the MIT license.
+The vendored `show-me` skill preserves a local safety section on top of
+`humanlayer/skills` commit `6ab9013`, with provenance and the MIT license.
 See [current release pins](packs/README.md#upstream-release-pins) and
 [migration evidence](docs/migrations/local-import.md).
 
@@ -152,7 +155,8 @@ version 3 only (`GPL-3.0-only`). See [LICENSE](LICENSE) for the full terms.
 
 Third-party skills and dependencies retain their respective licenses. In
 particular, the vendored REA skill remains under its
-[MIT license](skills/vendor/rea/LICENSE); external skill packs retain their
+[MIT license](skills/vendor/rea/LICENSE), and the vendored `show-me` skill
+remains under its [MIT license](skills/vendor/show-me/LICENSE); external skill packs retain their
 upstream licenses.
 
 ## References

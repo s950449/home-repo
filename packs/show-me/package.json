@@ -1,0 +1,10 @@
+{
+  "name": "home-skills-show-me",
+  "private": true,
+  "description": "Preserved show-me skill from humanlayer/skills with a local safety section.",
+  "homeRepo": {
+    "localSkills": [
+      "../../skills/vendor/show-me/show-me"
+    ]
+  }
+}

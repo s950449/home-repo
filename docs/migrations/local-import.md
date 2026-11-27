@@ -73,7 +73,8 @@ migration evidence. Its paths and initially unknown provenance describe the
 pre-migration state; it is not an active installation lock.
 
 Native `skills-lock.json` files are now the installation authority.
-`skills/vendor/rea/SOURCE.json` describes the sole vendored exception.
+`skills/vendor/rea/SOURCE.json` and `skills/vendor/show-me/SOURCE.json` describe
+the vendored exceptions.
 
 ## Global agent skills follow-up
 
@@ -94,3 +95,24 @@ with frozen locks in a clean temporary directory for Codex. All 79 restored
 files matched the original installations byte for byte. The Rex CLI continues
 to manage its generated `rex` entry point. Project profiles can select the new
 packs explicitly.
+
+## Codex skills follow-up
+
+On November 27, 2026, 23 non-system skills from the Codex skill directory were
+declared as two opt-in packs. Symlinked entries already covered by earlier
+packs and the Codex-managed `.system` directory were left out.
+
+| Pack | Upstream | Matching commit | License at the pin |
+| --- | --- | --- | --- |
+| `addyosmani-agent-skills` | `addyosmani/agent-skills` | `97e12d03e787fb5e68d313c693f080173027ffe3` | MIT |
+| `show-me` (vendored) | `humanlayer/skills` | `6ab9013a10c28f5046f7f999549cd5328a0b30d7` | MIT |
+
+For the 22 Addy Osmani skills, every one of the 26 local files matched its Git
+blob, and the upstream directory trees contained no extra files, at exactly one
+commit in upstream history. The local `show-me` matched no upstream commit:
+it equals the pinned `SKILL.md` plus a locally added safety section. It is
+vendored as a documented modified exception rather than pinned to raw upstream.
+
+On macOS with Node.js 26.13.1 and `skills@1.9.0`, both packs were synchronized
+for Codex, and all 23 installed bundles matched the original Codex installations
+byte for byte. The original Codex installations remain unchanged.

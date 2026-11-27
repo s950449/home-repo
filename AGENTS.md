@@ -50,6 +50,7 @@ It is not the operating system's home directory and not a product monorepo.
 - `adapters/README.md`: harness-specific discovery and portability limits.
 - `docs/migrations/local-import.md`: original baseline and migration evidence.
 - `skills/vendor/rea/SOURCE.json`: the documented rendered-skill exception.
+- `skills/vendor/show-me/SOURCE.json`: the documented modified-skill exception.
 
 Before modifying another repository, resolve its local path, read its applicable
 `AGENTS.md` and/or `CLAUDE.md`, and check its Git status. Use its working

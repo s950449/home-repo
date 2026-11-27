@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill": "show-me",
+  "kind": "modified-vendor-exception",
+  "upstream_url": "https://github.com/humanlayer/skills",
+  "upstream_commit": "6ab9013a10c28f5046f7f999549cd5328a0b30d7",
+  "upstream_path": "plugins/show-me/skills/show-me",
+  "upstream_plugin_version": "1.0.1",
+  "license": "MIT",
+  "verified_on": "2026-11-27",
+  "transformations": [
+    "Add a \"### safety\" section after line 122 of SKILL.md (ten lines covering untrusted input, HTML escaping, secrets, output locations, overwrites, inline scripts, and opening generated files)."
+  ],
+  "verification": "The vendored SKILL.md matches the local Codex installation byte for byte. It matches the pinned upstream SKILL.md except for the added safety section. No other upstream commit matches more closely. The MIT license matches upstream.",
+  "upstream_bundle_sha256": "933196bbcb56bcc4ce89ca773ad3e532eb16a204428d1eb81ad79c5fa1898b24",
+  "upstream_bundle_hash_algorithm": "skills-lock-v2"
+}

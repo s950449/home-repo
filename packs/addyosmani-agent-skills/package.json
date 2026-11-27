@@ -1,0 +1,29 @@
+{
+  "name": "home-skills-addyosmani-agent-skills",
+  "private": true,
+  "description": "Engineering lifecycle skills from the matching local Codex installation of addyosmani/agent-skills.",
+  "skills": [
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/api-and-interface-design",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/browser-testing-with-devtools",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/ci-cd-and-automation",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/code-review-and-quality",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/code-simplification",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/context-engineering",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/debugging-and-error-recovery",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/deprecation-and-migration",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/documentation-and-adrs",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/doubt-driven-development",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/frontend-ui-engineering",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/git-workflow-and-versioning",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/idea-refine",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/incremental-implementation",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/performance-optimization",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/planning-and-task-breakdown",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/security-and-hardening",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/shipping-and-launch",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/source-driven-development",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/spec-driven-development",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/test-driven-development",
+    "https://github.com/addyosmani/agent-skills/tree/97e12d03e787fb5e68d313c693f080173027ffe3/skills/using-agent-skills"
+  ]
+}

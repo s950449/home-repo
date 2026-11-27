@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "skills": {
+    "show-me": {
+      "source": "../../skills/vendor/show-me/show-me",
+      "sourceType": "local",
+      "computedHash": "503907dffac4ba53881efed20e47f1d99a860c05780953700f5ce6226d6bf7ee",
+      "installMode": "copy"
+    }
+  }
+}
