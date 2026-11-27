@@ -3,11 +3,11 @@
   "skills": {
     "agent-browser": {
       "source": "vercel-labs/agent-browser",
-      "ref": "523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204",
-      "commit": "523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204",
+      "ref": "f0a98351ec920bd826b22c98dacf8414f04b9832",
+      "commit": "f0a98351ec920bd826b22c98dacf8414f04b9832",
       "sourceType": "github",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "computedHash": "36d1d704bf92f722b183e0798059f732d65db61c61a8a7c767850cee8f960b42",
+      "computedHash": "a0dfac7503f69bcf529b2660fc79964064c4f179eb65695904ddc45fc0d99d20",
       "via": "."
     }
   }

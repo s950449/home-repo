@@ -4,7 +4,7 @@
     "reverse-engineer-anything": {
       "source": "../../skills/vendor/rea/reverse-engineer-anything",
       "sourceType": "local",
-      "computedHash": "d1311065cf6dbb171ece12de27261f67ea43d32bb1a94680f8eb9b70ef4e75e3",
+      "computedHash": "d75d42543c83d6000bbf06bb7c88b27c069f0b9ee42b6dc126a1e38b30f49958",
       "installMode": "copy"
     }
   }

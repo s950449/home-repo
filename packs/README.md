@@ -20,8 +20,8 @@ Root npm dependencies pin the installer separately from skill content.
 | `sandbox-migrate-to-next` | `sandbox-migrate-to-next` |
 | `turnstile-spin` | `turnstile-spin` |
 | `web-perf` | `web-perf` |
-| `reverse-engineering` | Original rendered `reverse-engineer-anything` |
-| `mattpocock-engineering` | `diagnose`, `grill-with-docs`, `improve-codebase-architecture`, `prototype`, `setup-matt-pocock-skills`, `tdd`, `to-issues`, `to-prd`, `triage`, `zoom-out` |
+| `reverse-engineering` | `reverse-engineer-anything` |
+| `mattpocock-engineering` | `diagnosing-bugs`, `grill-with-docs`, `improve-codebase-architecture`, `prototype`, `setup-matt-pocock-skills`, `tdd`, `to-tickets`, `to-spec`, `triage`, `zoom-out` |
 | `mattpocock-productivity` | `caveman`, `grill-me`, `handoff`, `write-a-skill` |
 | `agent-browser` | `agent-browser` |
 | `find-skills` | `find-skills` |
@@ -29,6 +29,23 @@ Root npm dependencies pin the installer separately from skill content.
 
 Each pack is independently selectable. Related tools, such as the
 `agent-browser` CLI, have their own installation requirements.
+
+## Upstream release pins
+
+| Upstream | Release or commit |
+| --- | --- |
+| Cloudflare Skills | [`626547c`](https://github.com/cloudflare/skills/commit/626547c06881a20b3322bdc2ed6e6451b33a4fb6) |
+| Matt Pocock Skills | [`v1.3.2`](https://github.com/mattpocock/skills/releases/tag/v1.3.2) |
+| Agent Browser | [`v0.45.0`](https://github.com/vercel-labs/agent-browser/releases/tag/v0.45.0) |
+| Find Skills | [`v1.9.1`](https://github.com/vercel-labs/skills/releases/tag/v1.9.1) |
+| Remotion Skills | [`0fd8c6b`](https://github.com/remotion-dev/skills/commit/0fd8c6b1fadcd26718a2919bcac705809f8456a3) |
+| REA | [`rea-agents-6.10.1`](https://github.com/morluto/rea/releases/tag/rea-agents-6.10.1) |
+
+Cloudflare Skills and Remotion Skills had no upstream releases or tags as of
+November 27, 2026. In Matt Pocock Skills v1.3.2, use `diagnosing-bugs` for
+`diagnose`, `to-spec` for `to-prd`, and `to-tickets` for `to-issues`.
+`zoom-out`, `caveman`, and `write-a-skill` were removed upstream and remain
+available at their existing `b8be62f` pin.
 
 ## Declaration versus lock
 

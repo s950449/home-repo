@@ -12,20 +12,20 @@
     },
     "grill-me": {
       "source": "mattpocock/skills",
-      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
-      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "ref": "d1478fcb140db0b93c0c8df17bcfd311844749d0",
+      "commit": "d1478fcb140db0b93c0c8df17bcfd311844749d0",
       "sourceType": "github",
       "skillPath": "skills/productivity/grill-me/SKILL.md",
-      "computedHash": "ae5af68feccb5e86b50179641598729295d079bf35489aa745be0436252e3cd9",
+      "computedHash": "ab1acb9fbd9eaee03da254abb8a8de228d1e7a07475fe959da4a5eefa34ea4b9",
       "via": "."
     },
     "handoff": {
       "source": "mattpocock/skills",
-      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
-      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "ref": "d1478fcb140db0b93c0c8df17bcfd311844749d0",
+      "commit": "d1478fcb140db0b93c0c8df17bcfd311844749d0",
       "sourceType": "github",
       "skillPath": "skills/productivity/handoff/SKILL.md",
-      "computedHash": "01460bbb0ba1f82839de39aff3073ab763cce8499ce3529726350a548c66a5d9",
+      "computedHash": "f60a2c3688379b7a306b3a7b8dd4120eab39da44c74fa2cb62d6424935f04aa7",
       "via": "."
     },
     "write-a-skill": {

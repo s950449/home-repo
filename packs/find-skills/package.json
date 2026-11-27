@@ -3,6 +3,6 @@
   "private": true,
   "description": "Discovery and installation guidance for external agent skills.",
   "skills": [
-    "https://github.com/vercel-labs/skills/tree/8f1b9c87070b886c8c1c1bebd2dc83c4963cbf45/skills/find-skills"
+    "https://github.com/vercel-labs/skills/tree/e7fd0e9e52f029fe87729d8185cb8caf7049f678/skills/find-skills"
   ]
 }

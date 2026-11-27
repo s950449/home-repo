@@ -3,6 +3,6 @@
   "private": true,
   "description": "Browser automation guidance for the agent-browser CLI.",
   "skills": [
-    "https://github.com/vercel-labs/agent-browser/tree/523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204/skills/agent-browser"
+    "https://github.com/vercel-labs/agent-browser/tree/f0a98351ec920bd826b22c98dacf8414f04b9832/skills/agent-browser"
   ]
 }

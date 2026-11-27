@@ -136,8 +136,9 @@ or machine-local state.
 
 The 14 Cloudflare skills remain at their original matching commit
 `626547c06881a20b3322bdc2ed6e6451b33a4fb6`, not today's upstream version.
-REA retains its original rendered 6.8.0 skill with provenance and the MIT license.
-See [migration evidence](docs/migrations/local-import.md).
+The vendored REA skill tracks release 6.10.1 with provenance and the MIT license.
+See [current release pins](packs/README.md#upstream-release-pins) and
+[migration evidence](docs/migrations/local-import.md).
 
 No benchmark, automated skill improvement, MCP registration, or analysis-engine
 installation has been added.
