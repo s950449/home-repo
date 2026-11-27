@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "ref": "8f1b9c87070b886c8c1c1bebd2dc83c4963cbf45",
+      "commit": "8f1b9c87070b886c8c1c1bebd2dc83c4963cbf45",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "bad9884f0a4a7e827bf677c4b63e04053b2290c6671954fcb5a6cae692c5a13f",
+      "via": "."
+    }
+  }
+}

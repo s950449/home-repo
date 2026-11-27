@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "skills": {
+    "diagnose": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/diagnose/SKILL.md",
+      "computedHash": "4097d9d5a188c39c22e93675f937b7a1cf8c0e2dd5bed0b6833f268c151b11ac",
+      "via": "."
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "computedHash": "028dcb4e96c952ae5644217c34faab03c2bbc3d2c253bfbe7924e7fe606b7484",
+      "via": "."
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "computedHash": "3589e1819391647319161d3cd326a89da84971ac6736f366a660a0c330903037",
+      "via": "."
+    },
+    "prototype": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/prototype/SKILL.md",
+      "computedHash": "43a5642ec7a4cb9d20e5ebecf76c761b0c19b60a27de4a896c0a632880be288a",
+      "via": "."
+    },
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "computedHash": "2147342a661fa9f643a864190d2449b75191dc2a255e4120999f0655511ede6a",
+      "via": "."
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "computedHash": "ce64d0ee73f35c0dcb09d1f9ce83c2ab1bc365f38329dc547eb0e1197f2115c6",
+      "via": "."
+    },
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-issues/SKILL.md",
+      "computedHash": "48ccec1d6c28a77b03988b169b3c323a768665f73ab1d28f23d91fac43f31dc1",
+      "via": "."
+    },
+    "to-prd": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-prd/SKILL.md",
+      "computedHash": "f2c87a41e6ccf15013d8e47441c4661a6986d8a154928eec1785b88c83a33907",
+      "via": "."
+    },
+    "triage": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/triage/SKILL.md",
+      "computedHash": "4ff1c1f7ceef30a3ad0fa382b96daaac5eb02d6a9cc3467cce2b96b91c735c31",
+      "via": "."
+    },
+    "zoom-out": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/zoom-out/SKILL.md",
+      "computedHash": "43d4c5044e94ffde05e6a78861b7b0b0023f5ba46146d470630a6986b5a72c39",
+      "via": "."
+    }
+  }
+}

@@ -74,3 +74,23 @@ pre-migration state; it is not an active installation lock.
 
 Native `skills-lock.json` files are now the installation authority.
 `skills/vendor/rea/SOURCE.json` describes the sole vendored exception.
+
+## Global agent skills follow-up
+
+On November 27, 2026, 17 skills from the global agent skill directory were
+declared as five opt-in packs. The four upstream commits were selected by
+matching every local file to its Git blob. For the 15 skills with a Git folder
+hash in the original installation record, the upstream tree also matched.
+
+| Packs | Upstream | Matching commit | License at the pin |
+| --- | --- | --- | --- |
+| `mattpocock-engineering`, `mattpocock-productivity` | `mattpocock/skills` | `b8be62ffacb0118fa3eaa29a0923c87c8c11985c` | MIT |
+| `agent-browser` | `vercel-labs/agent-browser` | `523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204` | Apache-2.0 |
+| `find-skills` | `vercel-labs/skills` | `8f1b9c87070b886c8c1c1bebd2dc83c4963cbf45` | MIT in package metadata |
+| `remotion-best-practices` | `remotion-dev/skills` | `0fd8c6b1fadcd26718a2919bcac705809f8456a3` | No license declaration found at this pin |
+
+On macOS with Node.js 26.13.1 and `skills@1.9.0`, all five packs restored
+with frozen locks in a clean temporary directory for Codex. All 79 restored
+files matched the original installations byte for byte. The Rex CLI continues
+to manage its generated `rex` entry point. Project profiles can select the new
+packs explicitly.

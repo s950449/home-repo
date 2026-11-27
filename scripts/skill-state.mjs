@@ -66,19 +66,29 @@ export async function loadPack(name, { root = ROOT, allowMissingLock = false } =
   if (await realpath(directory) !== directory) throw new Error(`Pack must not use symlinked paths: ${name}`);
   const manifest = await readJson(path.join(directory, "package.json"));
   const declarations = new Map();
+  const skillIds = manifest.homeRepo?.skillIds ?? {};
+  if (typeof skillIds !== "object" || Array.isArray(skillIds)) {
+    throw new Error(`Expected a Git skill ID map in ${name}`);
+  }
+  const unusedSkillIdPaths = new Set(Object.keys(skillIds));
   for (const source of manifest.skills ?? []) {
     if (typeof source !== "string") throw new Error(`Invalid source in ${name}`);
     const match = GIT_SOURCE.exec(source);
     if (!match || match[4].split("/").some((part) => !part || part === "." || part === "..")) {
       throw new Error(`Use a full-commit GitHub tree URL in ${name}: ${source}`);
     }
-    const id = match[4].split("/").at(-1);
-    if (!ID.test(id) || declarations.has(id)) throw new Error(`Duplicate or invalid skill in ${name}: ${id}`);
+    const folder = match[4];
+    const id = Object.hasOwn(skillIds, folder) ? skillIds[folder] : folder.split("/").at(-1);
+    if (typeof id !== "string" || !ID.test(id) || declarations.has(id)) {
+      throw new Error(`Duplicate or invalid skill in ${name}: ${id}`);
+    }
+    unusedSkillIdPaths.delete(folder);
     declarations.set(id, {
       type: "github", source, repository: `${match[1]}/${match[2]}`,
-      commit: match[3], skillPath: `${match[4]}/SKILL.md`,
+      commit: match[3], skillPath: `${folder}/SKILL.md`,
     });
   }
+  if (unusedSkillIdPaths.size) throw new Error(`Skill ID map contains undeclared paths in ${name}`);
   for (const source of manifest.homeRepo?.localSkills ?? []) {
     if (typeof source !== "string" || path.isAbsolute(source)) throw new Error(`Local sources must be relative: ${name}`);
     const target = await realpath(path.resolve(directory, source));

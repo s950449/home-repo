@@ -21,10 +21,14 @@ Root npm dependencies pin the installer separately from skill content.
 | `turnstile-spin` | `turnstile-spin` |
 | `web-perf` | `web-perf` |
 | `reverse-engineering` | Original rendered `reverse-engineer-anything` |
+| `mattpocock-engineering` | `diagnose`, `grill-with-docs`, `improve-codebase-architecture`, `prototype`, `setup-matt-pocock-skills`, `tdd`, `to-issues`, `to-prd`, `triage`, `zoom-out` |
+| `mattpocock-productivity` | `caveman`, `grill-me`, `handoff`, `write-a-skill` |
+| `agent-browser` | `agent-browser` |
+| `find-skills` | `find-skills` |
+| `remotion-best-practices` | `remotion-best-practices` |
 
-Except for the two larger development selections, these preserve the original
-library as individually selectable capabilities. They do not imply that related
-skills, MCP tools, or operating system dependencies are installed automatically.
+Each pack is independently selectable. Related tools, such as the
+`agent-browser` CLI, have their own installation requirements.
 
 ## Declaration versus lock
 
@@ -35,8 +39,11 @@ skills, MCP tools, or operating system dependencies are installed automatically.
   source path, and `computedHash` for the complete installed bundle.
 - Root `package-lock.json`: Locks the CLI and npm dependencies with npm integrity
   values. It does not install the external skills by itself.
+- `homeRepo.skillIds`: Maps a declared upstream directory to the native skill
+  ID when the names differ. For example, Remotion uses `skills/remotion` for
+  `remotion-best-practices`.
 
-`reverse-engineering` is the sole exception: `homeRepo.localSkills` is custom
+`reverse-engineering` is the sole vendored exception. `homeRepo.localSkills` is custom
 Home Repo metadata pointing to a relative, Git-tracked vendored bundle.
 The CLI's native `skills` field rejects local paths. The wrapper uses native
 `skills add` to create/update this local lock and native frozen restore afterward.

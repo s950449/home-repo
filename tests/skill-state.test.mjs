@@ -72,6 +72,20 @@ test("validates matching manifest pins, native locks, and installed content", as
   assert.equal(await assertInstallationsSafe(pack), 1);
 });
 
+test("validates a native skill ID that differs from its upstream directory", async (t) => {
+  const { root, directory, pack } = await fixture(t);
+  const commit = pack.lock.skills.demo.commit;
+  await json(path.join(directory, "package.json"), {
+    skills: [`https://github.com/example/skills/tree/${commit}/skills/upstream-name`],
+    homeRepo: { skillIds: { "skills/upstream-name": "demo" } },
+  });
+  pack.lock.skills.demo.skillPath = "skills/upstream-name/SKILL.md";
+  await json(pack.lockPath, pack.lock);
+  const renamed = await loadPack("demo", { root });
+  await assertLockMatchesManifest(renamed);
+  assert.equal(await assertInstallationsSafe(renamed), 1);
+});
+
 test("rejects branch pins, path traversal, and mismatched lock commits", async (t) => {
   const { root, directory, pack } = await fixture(t);
   pack.lock.skills.demo.commit = "b".repeat(40);

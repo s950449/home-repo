@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "skills": {
+    "caveman": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/caveman/SKILL.md",
+      "computedHash": "24801f1e2f064bf0c54f63adb2aba44bef0b9be80b95c79582c33f4b1dbf4157",
+      "via": "."
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "ae5af68feccb5e86b50179641598729295d079bf35489aa745be0436252e3cd9",
+      "via": "."
+    },
+    "handoff": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/handoff/SKILL.md",
+      "computedHash": "01460bbb0ba1f82839de39aff3073ab763cce8499ce3529726350a548c66a5d9",
+      "via": "."
+    },
+    "write-a-skill": {
+      "source": "mattpocock/skills",
+      "ref": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "commit": "b8be62ffacb0118fa3eaa29a0923c87c8c11985c",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/write-a-skill/SKILL.md",
+      "computedHash": "44d9a92c43c083a2f05b2c407f2217226fe1252aae82292c0e1b72150a6dccff",
+      "via": "."
+    }
+  }
+}

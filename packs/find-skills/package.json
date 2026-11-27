@@ -1,0 +1,8 @@
+{
+  "name": "home-skills-find-skills",
+  "private": true,
+  "description": "Discovery and installation guidance for external agent skills.",
+  "skills": [
+    "https://github.com/vercel-labs/skills/tree/8f1b9c87070b886c8c1c1bebd2dc83c4963cbf45/skills/find-skills"
+  ]
+}

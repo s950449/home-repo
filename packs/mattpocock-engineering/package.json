@@ -1,0 +1,17 @@
+{
+  "name": "home-skills-mattpocock-engineering",
+  "private": true,
+  "description": "Engineering workflows from the matching local Matt Pocock skill installation.",
+  "skills": [
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/diagnose",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/grill-with-docs",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/improve-codebase-architecture",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/prototype",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/setup-matt-pocock-skills",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/tdd",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/to-issues",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/to-prd",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/triage",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/engineering/zoom-out"
+  ]
+}

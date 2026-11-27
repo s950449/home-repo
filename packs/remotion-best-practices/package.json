@@ -1,0 +1,13 @@
+{
+  "name": "home-skills-remotion-best-practices",
+  "private": true,
+  "description": "Best practices for creating videos with Remotion.",
+  "skills": [
+    "https://github.com/remotion-dev/skills/tree/0fd8c6b1fadcd26718a2919bcac705809f8456a3/skills/remotion"
+  ],
+  "homeRepo": {
+    "skillIds": {
+      "skills/remotion": "remotion-best-practices"
+    }
+  }
+}

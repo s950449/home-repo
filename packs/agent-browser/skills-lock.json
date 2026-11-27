@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "ref": "523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204",
+      "commit": "523d7d57f1cd557e5ff8308b2dcaa1a4af1e7204",
+      "sourceType": "github",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "computedHash": "36d1d704bf92f722b183e0798059f732d65db61c61a8a7c767850cee8f960b42",
+      "via": "."
+    }
+  }
+}

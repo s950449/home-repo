@@ -1,0 +1,11 @@
+{
+  "name": "home-skills-mattpocock-productivity",
+  "private": true,
+  "description": "Productivity workflows from the matching local Matt Pocock skill installation.",
+  "skills": [
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/productivity/caveman",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/productivity/grill-me",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/productivity/handoff",
+    "https://github.com/mattpocock/skills/tree/b8be62ffacb0118fa3eaa29a0923c87c8c11985c/skills/productivity/write-a-skill"
+  ]
+}
