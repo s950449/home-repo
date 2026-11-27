@@ -1,0 +1,67 @@
+name: upstream
+
+# Proves that every pinned pack still restores from upstream with the locked
+# content hashes, that vendored provenance matches the pinned upstream bundles,
+# and summarizes third-party skill content for review. Each pack is restored
+# separately, for one agent, into the disposable runner checkout only.
+
+on:
+  pull_request:
+    paths:
+      - "packs/**"
+      - "skills/vendor/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/upstream.yml"
+  schedule:
+    - cron: "41 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 26
+          package-manager-cache: false
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Restore each pack with its frozen lock
+        run: |
+          failed=0
+          for directory in packs/*/; do
+            pack="$(basename "$directory")"
+            echo "::group::restore $pack"
+            if ! npm run skills:restore -- "$pack" --agent codex; then
+              echo "::error title=Restore failed::$pack did not restore with its frozen lock"
+              failed=1
+            fi
+            echo "::endgroup::"
+          done
+          exit "$failed"
+
+      - name: Validate restored content against the locks
+        run: npm run validate
+
+      - name: Verify vendored provenance against pinned upstream commits
+        run: node scripts/provenance.mjs verify-upstream
+
+      - name: Audit restored skill content
+        if: ${{ !cancelled() }}
+        run: node scripts/audit-content.mjs

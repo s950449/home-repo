@@ -146,7 +146,28 @@ See [current release pins](packs/README.md#upstream-release-pins) and
 No benchmark, automated skill improvement, MCP registration, or analysis-engine
 installation has been added.
 Content reproducibility does not guarantee upstream availability, workflow
-correctness, or OS-specific tool compatibility. Only Linux has been tested.
+correctness, or OS-specific tool compatibility. CI runs the management tests on
+Linux and macOS; Windows is untested.
+
+## Continuous integration
+
+- `ci`: Runs `npm run validate`, `scripts/validate.py`, and `npm test` on Linux
+  with the minimum supported Node.js version and the current release, and on
+  macOS.
+- `supply-chain`: Verifies npm registry signatures, scans dependencies with
+  OSV-Scanner, scans the full Git history with gitleaks, and audits workflows
+  and Dependabot configuration with zizmor. Results upload to code scanning
+  outside pull requests.
+- `upstream`: Weekly, and on pull requests that touch packs, vendored skills,
+  or scripts, restores each pack separately with its frozen lock in the
+  disposable runner checkout, validates the restored hashes, recomputes each
+  vendored bundle's `upstream_bundle_sha256` from its pinned commit, and writes
+  a heuristic content audit to the job summary.
+
+The content audit (`scripts/audit-content.mjs`) flags scripts, executable files,
+pipe-to-shell commands, unpinned `@latest` runners, and similar patterns for
+review. It fails only on hidden Unicode controls. It is a review aid, not a
+safety guarantee.
 
 ## License
 

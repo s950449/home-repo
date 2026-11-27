@@ -71,6 +71,10 @@ Home Repo metadata pointing to a relative, Git-tracked vendored bundle.
 The CLI's native `skills` field rejects local paths. The wrapper uses native
 `skills add` to create/update this local lock and native frozen restore afterward.
 No absolute machine path is committed.
+Each vendored bundle needs `SOURCE.json` and `LICENSE`, and exactly one pack must
+declare it. `npm run validate` checks those records offline.
+`node scripts/provenance.mjs verify-upstream` downloads each pinned upstream
+commit and confirms `upstream_bundle_sha256`.
 
 ## Ordinary restoration
 
