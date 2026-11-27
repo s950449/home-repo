@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { personalSkill, resolveProfile } from "./profile-state.mjs";
+import { assertVendorProvenance } from "./provenance.mjs";
 import {
   ROOT, assertInstallationsSafe, assertLockMatchesManifest, exists,
   loadPack, readJson,
@@ -26,6 +27,7 @@ async function main() {
     packs.set(entry.name, pack);
     for (const id of pack.declarations.keys()) known.add(id);
   }
+  const vendored = await assertVendorProvenance(packs.values());
   const personal = path.join(ROOT, "skills/personal");
   if (await exists(personal)) {
     for (const entry of await readdir(personal, { withFileTypes: true })) {
@@ -41,7 +43,7 @@ async function main() {
     await resolveProfile(filename.slice(0, -5));
     profiles++;
   }
-  console.log(`OK: ${packs.size} native skill packs, ${known.size} unique skills, ${profiles} profiles.`);
+  console.log(`OK: ${packs.size} native skill packs, ${known.size} unique skills, ${profiles} profiles, ${vendored} vendor provenance records.`);
   console.log(`Checked ${installedLocations} present installation locations; absent installs are allowed.`);
   console.log("Structural and content-integrity validation only; no skill workflows were executed.");
 }

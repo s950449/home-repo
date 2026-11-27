@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Keep every main run so each pushed commit gets a complete result.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: test (${{ matrix.os }}, node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Minimum version declared in package.json engines.
+          - os: ubuntu-latest
+            node: 22.20.0
+          - os: ubuntu-latest
+            node: 26
+          # macOS resolves temporary directories through symlinks, which the
+          # management scripts reject; keep that path covered.
+          - os: macos-latest
+            node: 26
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Validate pack manifests, locks, profiles, and vendor provenance
+        run: npm run validate
+
+      - name: Validate through the Python compatibility entry point
+        run: python3 scripts/validate.py
+
+      - name: Run management script tests
+        run: npm test
